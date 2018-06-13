@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDiary.ViewModel.Login
+namespace MyDiary.ViewModel
 {
-    class LoginMainWindowViewModel
+    public class LoginMainViewModel
     {
     }
 }

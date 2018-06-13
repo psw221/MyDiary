@@ -56,9 +56,9 @@
     </ApplicationDefinition>
     <Compile Include="Classes\BindableBase.cs" />
     <Compile Include="Classes\MyICommand.cs" />
-    <Compile Include="ViewModel\Login\LoginMainWindowViewModel.cs" />
-    <Compile Include="Views\Login\LoginMainWindow.xaml.cs">
-      <DependentUpon>LoginMainWindow.xaml</DependentUpon>
+    <Compile Include="ViewModel\LoginMainViewModel.cs" />
+    <Compile Include="Views\LoginMainView.xaml.cs">
+      <DependentUpon>LoginMainView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -72,7 +72,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\Login\LoginMainWindow.xaml">
+    <Page Include="Views\LoginMainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
