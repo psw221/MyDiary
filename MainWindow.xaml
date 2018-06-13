@@ -9,6 +9,9 @@
         Title="MainWindow"  Height="500" Width="350"
         WindowStyle="None" AllowsTransparency="True" BorderBrush="Black" BorderThickness="1"
         Background="#ff6495ed">
+    <Window.DataContext>
+        <local:MainWindowViewModel />
+    </Window.DataContext>
     
     <Grid>
         <Grid.RowDefinitions>
@@ -28,7 +31,7 @@
         </Grid>
 
         <Grid Grid.Row="1" x:Name="MainContent" >
-            
+            <ContentControl Content="{Binding CurrentView}" />
         </Grid>
     </Grid>
 </Window>
