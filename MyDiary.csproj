@@ -55,6 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\BindableBase.cs" />
+    <Compile Include="Classes\MyICommand.cs" />
     <Compile Include="ViewModel\Login\LoginMainWindowViewModel.cs" />
     <Compile Include="Views\Login\LoginMainWindow.xaml.cs">
       <DependentUpon>LoginMainWindow.xaml</DependentUpon>
