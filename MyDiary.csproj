@@ -56,10 +56,24 @@
     </ApplicationDefinition>
     <Compile Include="Classes\BindableBase.cs" />
     <Compile Include="Classes\MyICommand.cs" />
+    <Compile Include="Controls\ExitButtonControl.xaml.cs">
+      <DependentUpon>ExitButtonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MinimizeButtonControl.xaml.cs">
+      <DependentUpon>MinimizeButtonControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\LoginMainViewModel.cs" />
     <Compile Include="Views\LoginMainView.xaml.cs">
       <DependentUpon>LoginMainView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\ExitButtonControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MinimizeButtonControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -106,9 +120,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Controls\" />
-    <Folder Include="Images\" />
+    <Resource Include="Images\exit_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\exit_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minimize_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minimize_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,9 +4,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyDiary"
+        xmlns:bcontrol="clr-namespace:MyDiary.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"  Height="500" Width="350"
+        WindowStyle="None" AllowsTransparency="True" BorderBrush="Black" BorderThickness="1"
+        Background="#ff6495ed">
+    
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+
+            <bcontrol:ExitButtonControl Grid.Column="2" x:Name="btn_Exit" Click="btn_Exit_Click" Margin="3" />
+            <bcontrol:MinimizeButtonControl Grid.Column="1" x:Name="btn_Min" Click="btn_Min_Click" Margin="3" />
+        </Grid>
+
+        <Grid Grid.Row="1" x:Name="MainContent" >
+            
+        </Grid>
     </Grid>
 </Window>

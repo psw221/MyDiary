@@ -23,6 +23,30 @@ namespace MyDiary
         public MainWindow()
         {
             InitializeComponent();
+
+            this.MouseLeftButtonDown += MainWindow_MouseLeftButtonDown;
+        }
+
+        void MainWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                this.DragMove();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void btn_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Min_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }
