@@ -24,5 +24,9 @@ namespace MyDiary
             get { return _CurrentView; }
             set { SetProperty(ref _CurrentView, value); }
         }
+
+        public MyICommand NavCommand { get; private set; }
+
+
     }
 }

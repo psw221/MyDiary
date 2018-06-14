@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyDiary"
         xmlns:bcontrol="clr-namespace:MyDiary.Controls"
+        xmlns:views="clr-namespace:MyDiary.Views"
+        xmlns:viewModel="clr-namespace:MyDiary.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow"  Height="500" Width="350"
         WindowStyle="None" AllowsTransparency="True" BorderBrush="Black" BorderThickness="1"
@@ -12,6 +14,12 @@
     <Window.DataContext>
         <local:MainWindowViewModel />
     </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:LoginMainViewModel}" >
+            <views:LoginMainView />
+        </DataTemplate>
+    </Window.Resources>
     
     <Grid>
         <Grid.RowDefinitions>
