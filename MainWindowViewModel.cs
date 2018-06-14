@@ -13,9 +13,12 @@ namespace MyDiary
         public MainWindowViewModel()
         {
             CurrentView = loginMainView;
+
+            NavCommand = new MyICommand<string>(OnNav);
         }
 
         private LoginMainView loginMainView = new LoginMainView();
+        private DiaryMainView diaryMainView = new DiaryMainView();
 
         private object _CurrentView;
 
@@ -25,8 +28,20 @@ namespace MyDiary
             set { SetProperty(ref _CurrentView, value); }
         }
 
-        public MyICommand NavCommand { get; private set; }
+        public MyICommand<string> NavCommand { get; private set; }
 
-
+        private void OnNav(string destination)
+        {
+            switch (destination)
+            {
+                case "Login":
+                    CurrentView = diaryMainView;
+                    break;
+                case "customers":
+                default:
+                    //CurrentView;
+                    break;
+            }
+        }
     }
 }

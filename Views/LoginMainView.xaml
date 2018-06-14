@@ -84,7 +84,8 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Button x:Name="btn_Login" Content="로 그 인" Grid.Row="0" Height="35" Width="200" VerticalAlignment="Bottom" Background="#ffffd68c" FontWeight="Bold" >
+            <Button x:Name="btn_Login" Content="로 그 인" Grid.Row="0" Height="35" Width="200" VerticalAlignment="Bottom" 
+                    Background="#ffffd68c" FontWeight="Bold" Command="{Binding NavCommand}" CommandParameter="Login" >
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Style.Triggers>

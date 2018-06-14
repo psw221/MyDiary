@@ -7,17 +7,17 @@ using System.Windows.Input;
 
 namespace MyDiary.Classes
 {
-    public class MyICommand : ICommand
+    public class MyICommand<T> : ICommand
     {
-        Action<object> _TargetExecuteMethod;
-        Func<object, bool> _TargetCanExecuteMethod;
+        Action<T> _TargetExecuteMethod;
+        Func<T, bool> _TargetCanExecuteMethod;
 
-        public MyICommand(Action<object> executeMethod)
+        public MyICommand(Action<T> executeMethod)
         {
             _TargetExecuteMethod = executeMethod;
         }
 
-        public MyICommand(Action<object> executeMethod, Func<object, bool> canExecuteMethod)
+        public MyICommand(Action<T> executeMethod, Func<T, bool> canExecuteMethod)
         {
             _TargetExecuteMethod = executeMethod;
             _TargetCanExecuteMethod = canExecuteMethod;
@@ -34,7 +34,7 @@ namespace MyDiary.Classes
         {
             if (_TargetCanExecuteMethod != null)
             {
-                object tparm = parameter;
+                T tparm = (T)parameter;
                 return _TargetCanExecuteMethod(tparm);
             }
 
@@ -52,7 +52,7 @@ namespace MyDiary.Classes
         {
             if (_TargetExecuteMethod != null)
             {
-                _TargetExecuteMethod(parameter);
+                _TargetExecuteMethod((T)parameter);
             }
         }
 

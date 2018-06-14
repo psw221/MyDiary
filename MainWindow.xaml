@@ -19,6 +19,9 @@
         <DataTemplate DataType="{x:Type viewModel:LoginMainViewModel}" >
             <views:LoginMainView />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type local:MainWindowViewModel}" >
+            <views:LoginMainView />
+        </DataTemplate>
     </Window.Resources>
     
     <Grid>

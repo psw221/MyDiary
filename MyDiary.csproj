@@ -70,6 +70,9 @@
       <DependentUpon>MinimizeButtonControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\LoginMainViewModel.cs" />
+    <Compile Include="Views\DiaryMainView.xaml.cs">
+      <DependentUpon>DiaryMainView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginMainView.xaml.cs">
       <DependentUpon>LoginMainView.xaml</DependentUpon>
     </Compile>
@@ -93,6 +96,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\DiaryMainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LoginMainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
