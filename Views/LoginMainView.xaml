@@ -5,8 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyDiary.Views"
              xmlns:pm="clr-namespace:MyDiary.Classes"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="470" d:DesignWidth="350">
+             d:DesignHeight="470" d:DesignWidth="350"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
     <UserControl.Resources>
         <Style x:Key="{x:Type PasswordBox}" TargetType="{x:Type PasswordBox}">
             <Setter Property="pm:PasswordBoxMonitor.IsMonitoring" Value="True"/>
@@ -43,7 +47,6 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
 
         <Image Grid.Row="0" Source="/images/diary.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="150" />
 
@@ -85,20 +88,7 @@
             </Grid.RowDefinitions>
 
             <Button x:Name="btn_Login" Content="로 그 인" Grid.Row="0" Height="35" Width="200" VerticalAlignment="Bottom" 
-                    Background="#ffffd68c" FontWeight="Bold" Command="{Binding NavCommand}" CommandParameter="Login" >
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Style.Triggers>
-                            <MultiDataTrigger>
-                                <MultiDataTrigger.Conditions>
-                                    <Condition Binding="{Binding ElementName=tb_IDbox, Path=Text.Length, Mode=OneWay}" Value="0" />
-                                    <Condition Binding="{Binding ElementName=tb_Paswordbox, Path=Text.Length, Mode=OneWay}" Value="0" />
-                                </MultiDataTrigger.Conditions>
-                                <Setter Property="IsEnabled" Value="False" />
-                            </MultiDataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
+                    FontWeight="Bold" Command="{Binding NavCommand}" CommandParameter="Login">
             </Button>
 
             <TextBlock x:Name="lb_newAccount" Text="회원이 아니신가요?" Grid.Row="1" VerticalAlignment="Top" Width="200" FontSize="11" />
