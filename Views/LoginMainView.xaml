@@ -9,7 +9,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="470" d:DesignWidth="350"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-             Background="{DynamicResource MaterialDesignPaper}"
+             Background="LightGray"
              FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
     <UserControl.Resources>
         <Style x:Key="{x:Type PasswordBox}" TargetType="{x:Type PasswordBox}">
@@ -43,8 +43,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1.5*"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -53,7 +53,7 @@
 
 
 
-        <TextBox Grid.Row="1" x:Name="tb_IDbox" Height="30" Width="200" VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" >
+        <TextBox Grid.Row="1" x:Name="tb_IDbox" Height="40" Width="250" VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" >
             <TextBox.Style>
                 <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                     <Style.Resources>
@@ -77,7 +77,7 @@
                 </Style>
             </TextBox.Style>
         </TextBox>
-        <PasswordBox Grid.Row="2" x:Name="tb_Paswordbox" Height="30" Width="200" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" >
+        <PasswordBox Grid.Row="2" x:Name="tb_Paswordbox" Height="40" Width="250" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" >
         </PasswordBox>
 
 
@@ -87,11 +87,11 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Button x:Name="btn_Login" Content="로 그 인" Grid.Row="0" Height="35" Width="200" VerticalAlignment="Bottom" 
+            <Button x:Name="btn_Login" Content="로 그 인" Grid.Row="0" Height="40" Width="250" VerticalAlignment="Bottom" 
                     FontWeight="Bold" Command="{Binding NavCommand}" CommandParameter="Login">
             </Button>
 
-            <TextBlock x:Name="lb_newAccount" Text="회원이 아니신가요?" Grid.Row="1" VerticalAlignment="Top" Width="200" FontSize="11" />
+            <TextBlock x:Name="lb_newAccount" Text="회원이 아니신가요?" Grid.Row="1" VerticalAlignment="Top" Width="250" FontSize="11" Margin="0 5 0 0" />
         </Grid>
     </Grid>
 </UserControl>
