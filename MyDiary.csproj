@@ -69,6 +69,7 @@
     <Compile Include="Controls\MinimizeButtonControl.xaml.cs">
       <DependentUpon>MinimizeButtonControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\DiaryMainViewModel.cs" />
     <Compile Include="ViewModel\LoginMainViewModel.cs" />
     <Compile Include="Views\DiaryBoardContentView.xaml.cs">
       <DependentUpon>DiaryBoardContentView.xaml</DependentUpon>
@@ -81,6 +82,9 @@
     </Compile>
     <Compile Include="Views\DiaryMainView.xaml.cs">
       <DependentUpon>DiaryMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiaryWirteContentView.xaml.cs">
+      <DependentUpon>DiaryWirteContentView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginMainView.xaml.cs">
       <DependentUpon>LoginMainView.xaml</DependentUpon>
@@ -118,6 +122,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DiaryMainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DiaryWirteContentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
