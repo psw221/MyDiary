@@ -8,7 +8,7 @@
         xmlns:views="clr-namespace:MyDiary.Views"
         xmlns:viewModel="clr-namespace:MyDiary.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow"  Height="630" Width="450"
+        Title="MainWindow"  Height="630" Width="1000"
         WindowStyle="None" AllowsTransparency="True" BorderBrush="Black" BorderThickness="1"
         Background="#ff6495ed">
     <Window.DataContext>
