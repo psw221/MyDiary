@@ -70,6 +70,15 @@
       <DependentUpon>MinimizeButtonControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\LoginMainViewModel.cs" />
+    <Compile Include="Views\DiaryBoardContentView.xaml.cs">
+      <DependentUpon>DiaryBoardContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiaryCalendarContentView.xaml.cs">
+      <DependentUpon>DiaryCalendarContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiaryMainContentView.xaml.cs">
+      <DependentUpon>DiaryMainContentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DiaryMainView.xaml.cs">
       <DependentUpon>DiaryMainView.xaml</DependentUpon>
     </Compile>
@@ -96,6 +105,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\DiaryBoardContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DiaryCalendarContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DiaryMainContentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\DiaryMainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
