@@ -75,29 +75,60 @@
 
                 <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF2887BD" HorizontalAlignment="Left">
                     <ListViewItem Height="60" Width="200" >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Home" Width="25" Height="25" Margin="10" VerticalAlignment="Center" />
-                            <TextBlock Text="Main" Margin="20 10" VerticalAlignment="Center" />
-                        </StackPanel>
+                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Home" Width="25" Height="25" Margin="10" VerticalAlignment="Center" />
+                                        <TextBlock Text="Home" Margin="20 10" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
                     </ListViewItem>
                     <ListViewItem Height="60" Width="200" >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Pencil" Width="25" Height="25" Margin="10" VerticalAlignment="Center" />
-                            <TextBlock Text="Create" Margin="20 10" VerticalAlignment="Center" />
-                        </StackPanel>
+                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Pencil" Width="25" Height="25" Margin="10" VerticalAlignment="Center" />
+                                        <TextBlock Text="Write" Margin="20 10" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
                     </ListViewItem>
                     <ListViewItem Height="60" Width="200" >
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Calendar" Width="25" Height="25" Margin="10" VerticalAlignment="Center" />
-                            <TextBlock Text="Calendar" Margin="20 10" VerticalAlignment="Center" />
-                        </StackPanel>
+                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Calendar" Width="25" Height="25" Margin="10" VerticalAlignment="Center" />
+                                        <TextBlock Text="Calendar" Margin="20 10" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
                     </ListViewItem>
                     <ListViewItem Height="60" Width="200" >
+                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center" />
+                                        <TextBlock Text="Board" Margin="20 10" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </ListViewItem>
+
+                    <!--<ListViewItem Height="60" Width="200" >
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center" />
                             <TextBlock Text="Board" Margin="20 10" VerticalAlignment="Center" />
                         </StackPanel>
-                    </ListViewItem>
+                    </ListViewItem>-->
                 </ListView>
             </StackPanel>
         </Grid>
