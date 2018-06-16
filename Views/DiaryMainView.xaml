@@ -5,8 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyDiary.Views"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:viewModel="clr-namespace:MyDiary.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1080">
+    <UserControl.DataContext>
+        <viewModel:DiaryMainViewModel />
+    </UserControl.DataContext>
+    
     <UserControl.Resources>
         <Storyboard x:Key="MenuOpen">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu" >
@@ -75,7 +80,8 @@
 
                 <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF2887BD" HorizontalAlignment="Left">
                     <ListViewItem Height="60" Width="200" >
-                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD">
+                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD"
+                                Command="{Binding DiaryCommand}" CommandParameter="Home">
                             <Button.Template>
                                 <ControlTemplate>
                                     <StackPanel Orientation="Horizontal">
@@ -87,7 +93,8 @@
                         </Button>
                     </ListViewItem>
                     <ListViewItem Height="60" Width="200" >
-                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD">
+                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD"
+                                Command="{Binding DiaryCommand}" CommandParameter="Pencil">
                             <Button.Template>
                                 <ControlTemplate>
                                     <StackPanel Orientation="Horizontal">
@@ -99,7 +106,8 @@
                         </Button>
                     </ListViewItem>
                     <ListViewItem Height="60" Width="200" >
-                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD">
+                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD"
+                                Command="{Binding DiaryCommand}" CommandParameter="Calendar">
                             <Button.Template>
                                 <ControlTemplate>
                                     <StackPanel Orientation="Horizontal">
@@ -111,7 +119,8 @@
                         </Button>
                     </ListViewItem>
                     <ListViewItem Height="60" Width="200" >
-                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD">
+                        <Button Height="60" Width="200" VerticalAlignment="Center" Foreground="#FF2887BD"
+                                Command="{Binding DiaryCommand}" CommandParameter="Board">
                             <Button.Template>
                                 <ControlTemplate>
                                     <StackPanel Orientation="Horizontal">
@@ -135,7 +144,7 @@
 
 
         <Grid x:Name="MainGrid" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Panel.ZIndex="1" >
-            <local:DiaryMainContentView />
+            <ContentControl Content="{Binding CurrentDiaryView}" />
         </Grid>
     </Grid>
 </UserControl>
