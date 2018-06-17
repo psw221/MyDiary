@@ -23,6 +23,7 @@ namespace MyDiary.Views
         public DiaryWirteContentView()
         {
             InitializeComponent();
+            // 주석추가 - 깃 테스트 
         }
     }
 }
